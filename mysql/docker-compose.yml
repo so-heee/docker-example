@@ -1,15 +1,17 @@
 version: "3.7"
+
 services:
   db:
     image: mysql:5.7
     ports:
       - "3306:3306"
     volumes:
-      - ./db/init:/docker-entrypoint-initdb.d
-      - ./db/data:/var/lib/mysql
-      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./sql/init:/docker-entrypoint-initdb.d
+      - ./sql/data:/var/lib/mysql
+      - ./sql/my.cnf:/etc/mysql/conf.d/my.cnf
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: sample
-      MYSQL_USER: docker
-      MYSQL_PASSWORD: docker
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      TZ: "Asia/Tokyo"

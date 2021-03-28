@@ -1,5 +1,4 @@
-CREATE DATABASE sample;
-use sample;
+USE sample;
 
 CREATE TABLE users (
     id INT(11) AUTO_INCREMENT NOT NULL,
