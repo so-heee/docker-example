@@ -1,12 +1,8 @@
----- drop ----
-DROP TABLE IF EXISTS `test_table`;
+CREATE DATABASE sample;
+use sample;
 
----- create ----
-create table IF not exists `test_table`
-(
- `id`               INT(20) AUTO_INCREMENT,
- `name`             VARCHAR(20) NOT NULL,
- `created_at`       Datetime DEFAULT NULL,
- `updated_at`       Datetime DEFAULT NULL,
-    PRIMARY KEY (`id`)
-) DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+CREATE TABLE users (
+    id INT(11) AUTO_INCREMENT NOT NULL,
+    name VARCHAR(64) NOT NULL,
+    PRIMARY KEY (id));
+);
